@@ -73,7 +73,7 @@
 //  console.log('Navigation to', e.target.textContent, 'was prevented');
 //});
 
-const list = document.querySelector('#book-list ul');
+//const list = document.querySelector('#book-list ul');
 
 // delete books
 //list.addEventListener('click', (e) => {
@@ -166,4 +166,14 @@ addForm.addEventListener('submit', function(e){
   li.appendChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
+});
+
+// hide books
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+  if(hideBox.checked){
+    list.style.display = "none";
+  } else {
+    list.style.display = "initial";
+  }
 });
